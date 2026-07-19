@@ -78,14 +78,14 @@ export default function NewSalesOrderPage() {
 
     if (itemsErr) { setError(itemsErr.message); setLoading(false); return }
 
-    router.push('/dashboard/sales-orders')
+    router.push('/sales-orders')
     router.refresh()
   }
 
   return (
     <div className="p-8 max-w-4xl">
       <div className="flex items-center gap-3 mb-6">
-        <Link href="/dashboard/sales-orders" className="text-gray-400 hover:text-gray-600">
+        <Link href="/sales-orders" className="text-gray-400 hover:text-gray-600">
           <ArrowLeft className="w-5 h-5" />
         </Link>
         <div>
@@ -201,7 +201,7 @@ export default function NewSalesOrderPage() {
             className="bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-6 py-2.5 rounded-lg font-medium text-sm transition-colors">
             {loading ? 'Saving...' : 'Create Sales Order'}
           </button>
-          <Link href="/dashboard/sales-orders"
+          <Link href="/sales-orders"
             className="px-6 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium text-sm transition-colors">
             Cancel
           </Link>
